@@ -20,4 +20,5 @@ export class AppComponent {
       this.newConvidado = {}  as Convidado
       form.resetForm();
     }
+
 }
