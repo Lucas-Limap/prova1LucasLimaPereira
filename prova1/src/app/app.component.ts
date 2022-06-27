@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Convidado } from './convidado/convidado';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prova1';
+    convidadoList : Convidado[] = []
+    newConvidado: Convidado = {} as Convidado
+
+    constructor (){ }
+    
+    ngOnInit(){ }
+
+    saveData(form: NgForm){
+      this.convidadoList.push(this.newConvidado)
+      this.newConvidado = {}  as Convidado
+      form.resetForm();
+    }
 }
