@@ -28,6 +28,9 @@
         </tr>
       </thead>
       <tbody>
+        <div *ngIf="">
+          <p>Sem convidados Cadastrados</p>
+        </div>
         <tr *ngFor="let convidado of convidadoList">
           <td>{{convidado.nome}}</td>
           <td>{{convidado.email | email}}</td>
